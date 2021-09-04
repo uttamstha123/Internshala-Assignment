@@ -1,0 +1,386 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* reset */
+html {
+  font-size: 62.5%;
+  background: #fff;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+li {
+  list-style: none;
+}
+
+/* header */
+.header {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* navigation */
+.navigation {
+  max-width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5em;
+}
+.nav {
+  max-width: 25%;
+  display: flex;
+  gap: 2rem;
+}
+.nav .ham-menu {
+  width: 3rem;
+  position: relative;
+  cursor: pointer;
+}
+.nav .ham-menu::after {
+  content: "";
+  position: absolute;
+  height: 0.8em;
+  width: 0.8em;
+  top: 0;
+  right: 0;
+  background: orange;
+  border-radius: 50%;
+  z-index: 10;
+}
+.nav .ham-menu img {
+  width: 2.5rem;
+}
+.nav .logo img {
+  width: 10rem;
+  transform: translateY(-0.5rem);
+}
+.navigation .btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--primary-color);
+  padding: 1em 1.5em;
+  border-radius: 0.25rem;
+}
+.navigation .btn img {
+  width: 1.5rem;
+  max-width: 80%;
+  margin-left: 1rem;
+}
+.navigation a {
+  font-size: 1.8rem;
+  color: #fff;
+  font-family: var(--ff-secondary);
+}
+
+.horizontal-line {
+  width: 100%;
+  max-width: 100%;
+  height: 0.15rem;
+  background: #aaa;
+  margin: 0 auto;
+}
+
+/* search bar */
+
+.container .search-bar {
+  max-width: 40%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: flex;
+  border: 0.2rem solid #f0f0f0;
+}
+.container .search-bar input {
+  width: 100%;
+  padding: 0.8em 1.5em;
+  border: none;
+  outline: none;
+}
+
+.container input::placeholder {
+  font-family: var(--ff-secondary);
+  color: #999;
+}
+.container .search-icon {
+  background: var(--primary-color);
+  width: 4rem;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .search-icon img {
+  width: 1.8rem;
+}
+
+/* card */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  overflow: hidden;
+}
+.card {
+  min-width: 90%;
+  margin: 0 auto;
+  padding: 5em 2.5em;
+  background-image: linear-gradient(
+      120deg,
+      rgba(168, 37, 255, 0.212),
+      rgba(203, 73, 255, 0.486)
+    ),
+    url("../img/background1.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: contain;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card .title {
+  color: var(--title-color);
+  font-family: var(--ff-primary);
+  line-height: 1em;
+  font-size: 4.5rem;
+  font-weight: 400;
+  width: 60%;
+  margin-bottom: 2rem;
+}
+.card p {
+  color: var(--subtitle-color);
+  font-family: var(--ff-subtitle);
+  font-weight: 300;
+  font-size: 1.8rem;
+}
+.card .link {
+  margin-top: auto;
+  margin-bottom: 1rem;
+}
+.card .link a {
+  color: var(--title-color);
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+/* slider */
+.slider {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin: 2rem 0 6rem 0;
+  gap: 1.5rem;
+}
+.slider span {
+  height: 1.5rem;
+  width: 1.5rem;
+  background: #aaa;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.slider .selected {
+  width: 4rem;
+  border-radius: 10rem;
+  background: var(--primary-color);
+}
+.main-section {
+  font-family: var(--ff-secondary);
+  text-align: center;
+  margin: 4rem 0 2rem 0;
+}
+.main-section .title h1 {
+  font-size: 3rem;
+  color: #222;
+}
+.main-section .title p {
+  margin-top: 0.5em;
+  font-size: 1.5rem;
+  color: #555;
+}
+.sub-section {
+  text-align: center;
+}
+.sub-section .title {
+  font-size: 1.8rem;
+  font-family: var(--ff-primary);
+  color: #222;
+  font-weight: 400;
+  margin: 2.5em 0 1em 0;
+}
+.section-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.item p {
+  font-family: var(--ff-primary);
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #222;
+  margin-top: 1rem;
+}
+#view-all {
+  margin: 6rem 0;
+  text-align: center;
+}
+#view-all a {
+  font-family: var(--ff-primary);
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+.footer {
+  background: #222;
+  padding: 1em 4em;
+}
+.footer a {
+  font-family: var(--ff-secondary);
+  font-size: 1.5rem;
+  color: #aaa;
+}
+
+.footer-links {
+  display: flex;
+  /* gap: 4rem; */
+  justify-content: center;
+}
+.footer .link1 {
+  flex: 1;
+}
+.footer .link2 {
+  flex: 2;
+}
+.footer .link {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.horizontal-line--footer {
+  margin: 4rem auto;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.company-links {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.company-links .app-link {
+  border: 2px solid #aaa;
+  padding: 1em 0.5em;
+  border-radius: 0.4rem;
+  transition: all 0.15s ease;
+}
+.company-links .app-link:hover,
+.app-link:hover a {
+  color: #222;
+  background: #aaa;
+}
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+.social-links img {
+  width: 4vh;
+}
+.company-copyright {
+  font-family: var(--ff-secondary);
+  font-size: 1.4rem;
+  color: #aaa;
+}
+
+/**************
+ Media query
+***************/
+
+@media (max-width: 980px) {
+  html {
+    font-size: 60%;
+  }
+  .header .navigation .btn {
+    padding: 0.25em 0.5rem;
+  }
+  .header .navigation .btn img {
+    width: 1.1rem;
+    margin-left: 0.5em;
+  }
+  .header .search-bar {
+    min-width: 90%;
+  }
+}
+
+@media (max-width: 780px) {
+  html {
+    font-size: 50%;
+  }
+  .card {
+    padding: 2.2em 1.25em;
+    gap: 0.8rem;
+  }
+}
+@media (max-width: 640px) {
+  html {
+    font-size: 12px;
+  }
+  .card {
+    min-width: 80%;
+    padding: 2.5em 1.5em;
+    background-image: linear-gradient(
+      120deg,
+      rgba(168, 37, 255, 0.212),
+      rgba(203, 73, 255, 0.486)
+    );
+  }
+  .card .title {
+    width: 100%;
+    font-size: 2rem;
+  }
+  .card .subtitle,
+  .card p {
+    font-size: 1.6rem;
+  }
+  .card .link a {
+    font-size: 1.5rem;
+  }
+  .container .slider {
+    gap: 0.9rem;
+  }
+  .container .slider span {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  .container .slider .selected {
+    width: 2rem;
+  }
+  .sub-section-container p {
+    margin-bottom: 1em;
+  }
+  .main-section .title h1 {
+    font-size: 2rem;
+  }
+  .main-section .title p {
+    font-size: 1.4rem;
+  }
+  .footer > *,.footer-bottom >* {
+    flex-direction: column;
+  }
+  .footer .company-copyright{
+    margin: 1rem 0;
+  }
+}
